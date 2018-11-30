@@ -135,7 +135,7 @@ if (parent.inheritableThreadLocals != null)
 
 这种"以空间换时间"的方式有个显著的好处就是 变量随线程结束而销毁了
 
-==4. ThreadLocalMap 没有next字段，所有不会存在链表。每次put之前都会检查对应的 slot 上的key是否存在，如果不存在直接插入；否则判断 key 是否相同，如果不同则放到下一个 slot 的位置， get 时也会判断如果 key 不同则去下一个位置去取==
+4. ThreadLocalMap 没有next字段，所有不会存在链表。每次put之前都会检查对应的 slot 上的key是否存在，如果不存在直接插入；否则判断 key 是否相同，如果不同则放到下一个 slot 的位置， get 时也会判断如果 key 不同则去下一个位置去取==
 ~~~java
 /**
  * Get the entry associated with key.  This method
